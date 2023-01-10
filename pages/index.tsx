@@ -6,9 +6,9 @@ import "firebase/compat/auth"
 
 export default function Home() {
 	const db = firebase.firestore()
-	const [user, loading, error] = useAuthState(firebase.auth())
+	const [user, loading, error] = useAuthState(firebase.auth() as any)
 	const [votes, votesLoading, votesError] = useCollection(
-		firebase.firestore().collection("votes")
+		firebase.firestore().collection("votes") as any
 	)
 
 	if (!votesLoading && votes) {
