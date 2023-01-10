@@ -19,8 +19,11 @@ export default function SignInScreen() {
 		<Box w="100%" h="100vh">
 			<Center h="100%">
 				<Flex flexDirection="column">
-					<Text fontSize={"xxx-large"} mb="5">
-						Pineapple Login
+					<Text fontSize={"xxx-large"} mb="5" mx="auto">
+						Pineapple on Pizza?
+					</Text>
+					<Text fontSize={"xx-large"} m="auto">
+						Login
 					</Text>
 					<StyledFirebaseAuth
 						uiConfig={uiConfig}
