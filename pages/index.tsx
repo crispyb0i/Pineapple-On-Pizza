@@ -3,17 +3,15 @@ import { useAuthState } from "react-firebase-hooks/auth"
 import { useCollection } from "react-firebase-hooks/firestore"
 import { Box, Button, Center, Flex, Link, Text } from "@chakra-ui/react"
 import "firebase/compat/auth"
+import { useState, useEffect } from "react"
 
 export default function Home() {
 	const db = firebase.firestore()
+	const [option, setOption] = useState("")
 	const [user, loading, error] = useAuthState(firebase.auth() as any)
 	const [votes, votesLoading, votesError] = useCollection(
 		firebase.firestore().collection("votes") as any
 	)
-
-	if (!votesLoading && votes) {
-		votes.docs.map((doc) => console.log(doc.data()))
-	}
 
 	//Create document function
 	const addVoteDocument = async (vote: string) => {
@@ -22,6 +20,7 @@ export default function Home() {
 			vote,
 		})
 	}
+
 	return (
 		<Box h="100vh">
 			<Center h="100%">
