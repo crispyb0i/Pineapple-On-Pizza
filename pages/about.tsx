@@ -16,7 +16,7 @@ export default function About() {
 							<Image
 								src={profilePicture.src}
 								alt="profile picture"
-								w="250px"
+								w="200px"
 								borderRadius="50%"
 								my="10"
 							/>
