@@ -23,8 +23,9 @@ export default function About() {
 						</Center>
 						<Text fontSize="lg" mb="10">
 							Have you ever wondered what the general consensus of the age old
-							question, "Pineapples on Pizza?" is? You've come to the right
-							place! Every vote matters so spread the word and vote today!
+							question, &quot;Pineapples on Pizza?&quot; is? You&apos;ve come to
+							the right place! Every vote matters so spread the word and vote
+							today!
 						</Text>
 						<Text mx="auto">Created by: David Shin</Text>
 						<Link href="https://www.david-sh.in" mx="auto">
